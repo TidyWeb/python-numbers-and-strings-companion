@@ -11,11 +11,11 @@ print(text.upper())
   },
   "runnable-2": {
     code: "# Write your code here",
-    input: "Qu inn Tay lor",
+    input: "",
   },
 };
 
-const storagePrefix = "string-methods-companion";
+const storagePrefix = "string-methods-companion-v2";
 const editor = document.querySelector("#code-editor");
 const consoleOutput = document.querySelector("#console-output");
 const runButton = document.querySelector("#run-code");

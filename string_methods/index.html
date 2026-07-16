@@ -167,7 +167,12 @@ print(cleaned_text)</code></pre>
             <div class="section-body">
               <p>Switch to <strong>Runnable 2</strong> and create a program that generates an email address from a name.</p>
               <ol class="question-list">
-                <li>Ask the user to enter their name.</li>
+                <li>
+                  Ask the user to enter their name. Store their answer in a variable and include a clear prompt inside <code>input()</code> so they know what to enter.
+                  <ol type="a">
+                    <li>In the <strong>Program input</strong> box, type <code>&nbsp;&nbsp;&nbsp;Qu inn Tay lor&nbsp;&nbsp;&nbsp;</code> exactly as shown, including the three extra spaces before and after the name. It is deliberately untidy because your program is going to correct it.</li>
+                  </ol>
+                </li>
                 <li>Remove extra spaces at the beginning and end.</li>
                 <li>Convert the name to lowercase.</li>
                 <li>Remove any spaces inside the name.</li>
@@ -175,7 +180,7 @@ print(cleaned_text)</code></pre>
               </ol>
 
               <div class="example-pair">
-                <div><small>Example input</small><code>Qu inn Tay lor</code></div>
+                <div><small>Program input — including outer spaces</small><code>&nbsp;&nbsp;&nbsp;Qu inn Tay lor&nbsp;&nbsp;&nbsp;</code></div>
                 <div><small>Example output</small><code>quinntaylor@email.com</code></div>
               </div>
 
@@ -254,7 +259,7 @@ print("Email address:", email)</code></pre>
 
           <div id="input-panel" class="input-panel" hidden>
             <label for="program-input">Program input <small>One response per line</small></label>
-            <textarea id="program-input" rows="2" spellcheck="false">Qu inn Tay lor</textarea>
+            <textarea id="program-input" rows="2" spellcheck="false"></textarea>
           </div>
 
           <div class="console-panel">
