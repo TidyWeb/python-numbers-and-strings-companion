@@ -1178,3 +1178,20 @@ kbd {
   outline: 3px solid #ffd166;
   outline-offset: 2px;
 }
+.chrome-requirement {
+  margin: 1.5rem 2rem 0;
+  padding: 1rem 1.5rem;
+  color: #2d1a12;
+  background: var(--accent);
+  border: 2px solid #c84e24;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 22px rgba(86, 39, 20, 0.18);
+  text-align: center;
+  line-height: 1.45;
+}
+
+.chrome-requirement strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+}
