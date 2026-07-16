@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A private offline companion lesson for practising Python arithmetic operators.">
+  <title>Basic Math with Arithmetic Operators — Offline Python Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#lesson-content">Skip to the lesson</a>
+
+  <div class="page-shell">
+    <aside class="course-rail" aria-label="Course navigation">
+      <a class="course-mark" href="../basic_maths_and_arithmetic_operators/index.html" aria-label="Return to the first lesson">Py</a>
+      <p class="eyebrow">Python foundations</p>
+      <h1>Manipulating Numbers &amp; Strings</h1>
+      <p class="course-note">Course 03 · Personal offline companion</p>
+
+      <nav class="course-lessons" aria-label="Lessons in this course section">
+        <p class="nav-heading">Lessons</p>
+        <ol>
+          <li class="current"><span>01</span><a href="../basic_maths_and_arithmetic_operators/index.html" aria-current="page">Basic Maths &amp; Arithmetic</a></li>
+          <li><span>02</span><a href="../incrementing_and_decrementing/index.html">Incrementing &amp; Decrementing</a></li>
+          <li><span>03</span><a href="../string_formatting/index.html">String Formatting</a></li>
+          <li><span>04</span><a href="../string_methods/index.html">String Methods</a></li>
+          <li><span>05</span><a href="../dynamic_formatting_with_f_strings/index.html">F-Strings</a></li>
+        </ol>
+      </nav>
+
+      <nav class="lesson-nav" aria-label="Sections on this page">
+        <p class="nav-heading">On this page</p>
+        <ol>
+          <li><span>01</span><a href="#challenge">Challenge</a></li>
+          <li><span>02</span><a href="#explanation">Explanation</a></li>
+          <li><span>03</span><a href="#test">Test</a></li>
+          <li><span>04</span><a href="#solution">Solution</a></li>
+          <li><span>05</span><a href="#review">Review</a></li>
+        </ol>
+      </nav>
+
+      <details class="mobile-course-nav">
+        <summary>Lessons <span aria-hidden="true">▾</span></summary>
+        <ol>
+          <li><a href="../basic_maths_and_arithmetic_operators/index.html" aria-current="page">1. Basic Maths &amp; Arithmetic</a></li>
+          <li><a href="../incrementing_and_decrementing/index.html">2. Incrementing &amp; Decrementing</a></li>
+          <li><a href="../string_formatting/index.html">3. String Formatting</a></li>
+          <li><a href="../string_methods/index.html">4. String Methods</a></li>
+          <li><a href="../dynamic_formatting_with_f_strings/index.html">5. F-Strings</a></li>
+        </ol>
+      </details>
+
+      <div class="rail-footer">
+        <strong>Offline mode</strong>
+        <span>The lesson and Python runner remain on this computer.</span>
+      </div>
+    </aside>
+
+    <main id="lesson-content" class="lesson-page">
+      <header class="lesson-header">
+        <div>
+          <p class="breadcrumb">Course 03 <span>/</span> Manipulating Numbers and Strings</p>
+          <h2>Basic Math with Arithmetic Operators</h2>
+        </div>
+        <div class="lesson-status" aria-label="Lesson status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Offline lesson
+        </div>
+      </header>
+
+      <div class="learning-stage">
+        <article class="reading-column">
+          <section class="lesson-intro">
+            <p class="section-kicker">Calculate with Python</p>
+            <p class="lede">Math is everywhere in everyday life, from calculating the total cost of groceries to determining how long a trip will take. Python arithmetic operators perform those same calculations in code.</p>
+          </section>
+
+          <details id="challenge" class="lesson-section challenge" open>
+            <summary>
+              <span class="section-number">01</span>
+              <span><small>Start by experimenting</small>Challenge</span>
+            </summary>
+            <div class="section-body">
+              <p>Try answering these questions before running the code in <strong>Runnable 1</strong>:</p>
+              <ol class="question-list">
+                <li>What value do you think will be printed to the console? Run the code to check your answer.</li>
+                <li>Work through the remaining lines one at a time. Predict each output, run the code, and identify what any unfamiliar symbol does.</li>
+                <li>When you run the final <code>print()</code> statement, is the result what you expected? Why or why not?</li>
+              </ol>
+            </div>
+          </details>
+
+          <details id="explanation" class="lesson-section explanation">
+            <summary>
+              <span class="section-number">02</span>
+              <span><small>Understand what happened</small>Explanation</span>
+            </summary>
+            <div class="section-body">
+              <div class="answer-strip">
+                <p><code>6 + 4</code> returns <code>10</code>.</p>
+                <p><code>10 - 3</code> returns <code>7</code>.</p>
+                <p><code>5 * 2</code> returns <code>10</code>.</p>
+                <p><code>8 / 4</code> returns <code>2.0</code>.</p>
+                <p><code>(2 + 3) * 2</code> returns <code>10</code>.</p>
+              </div>
+
+              <p>Parentheses change the order of a calculation: everything inside them is evaluated first. Division with <code>/</code> always returns a floating-point number, so <code>8 / 4</code> produces <code>2.0</code>.</p>
+
+              <h3>Understanding arithmetic operators</h3>
+              <div class="table-wrapper">
+                <table class="operator-table">
+                  <thead><tr><th>Operator</th><th>Description</th><th>Example</th><th>Result</th></tr></thead>
+                  <tbody>
+                    <tr><td><code>+</code></td><td>Addition</td><td><code>3 + 2</code></td><td><code>5</code></td></tr>
+                    <tr><td><code>-</code></td><td>Subtraction</td><td><code>7 - 4</code></td><td><code>3</code></td></tr>
+                    <tr><td><code>*</code></td><td>Multiplication</td><td><code>6 * 3</code></td><td><code>18</code></td></tr>
+                    <tr><td><code>/</code></td><td>Division; returns a float</td><td><code>8 / 2</code></td><td><code>4.0</code></td></tr>
+                    <tr><td><code>//</code></td><td>Floor division; rounds the whole-number result down</td><td><code>9 // 2</code></td><td><code>4</code></td></tr>
+                    <tr><td><code>%</code></td><td>Modulus; returns the remainder</td><td><code>10 % 3</code></td><td><code>1</code></td></tr>
+                    <tr><td><code>**</code></td><td>Exponentiation; raises a value to a power</td><td><code>2 ** 3</code></td><td><code>8</code></td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="concept-card">
+                <h3>Order of operations (PEMDAS)</h3>
+                <ol class="question-list">
+                  <li><strong>Parentheses</strong> <code>()</code></li>
+                  <li><strong>Exponents</strong> <code>**</code></li>
+                  <li><strong>Multiplication, division, floor division and modulus</strong> <code>* / // %</code>, evaluated left to right</li>
+                  <li><strong>Addition and subtraction</strong> <code>+ -</code>, evaluated left to right</li>
+                </ol>
+                <pre><code>print(5 + 2 * 3)    # 11
+print((5 + 2) * 3)  # 21</code></pre>
+              </div>
+            </div>
+          </details>
+
+          <details id="test" class="lesson-section test">
+            <summary>
+              <span class="section-number">03</span>
+              <span><small>Build something yourself</small>Test your knowledge</span>
+            </summary>
+            <div class="section-body">
+              <p><strong>Scenario:</strong> You are using a simple calculator to check some quick calculations. In <strong>Runnable 2</strong>, write a Python script that:</p>
+              <ol class="question-list">
+                <li>Asks the user for two numbers.</li>
+                <li>Performs addition, subtraction, multiplication, division, floor division and modulus.</li>
+                <li>Displays each result clearly, like a basic calculator.</li>
+              </ol>
+
+              <div class="example-pair">
+                <div><small>Example input</small><code>12<br>5</code></div>
+                <div><small>Example output</small><code>17<br>7<br>60<br>2.4<br>2<br>2</code></div>
+              </div>
+              <p class="tip"><strong>Note:</strong> Comments such as <code># Addition</code> explain the example but do not appear in the program output.</p>
+            </div>
+          </details>
+
+          <details id="solution" class="lesson-section solution">
+            <summary>
+              <span class="section-number">04</span>
+              <span><small>Compare after attempting it</small>Solution</span>
+            </summary>
+            <div class="section-body">
+              <p>Your solution may be different from this one:</p>
+              <pre><code># Get user input
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+# Perform arithmetic operations
+print(num1 + num2)
+print(num1 - num2)
+print(num1 * num2)
+print(num1 / num2)
+print(num1 // num2)
+print(num1 % num2)</code></pre>
+            </div>
+          </details>
+
+          <details id="review" class="lesson-section review">
+            <summary>
+              <span class="section-number">05</span>
+              <span><small>Take the idea forward</small>Review</span>
+            </summary>
+            <div class="section-body">
+              <p>Arithmetic operators are fundamental to calculations in Python. They can calculate discounts in a shop, distances in a mapping application, scores in a game and many other kinds of numerical data.</p>
+            </div>
+          </details>
+
+          <nav class="lesson-pager" aria-label="Adjacent lessons">
+            <span class="pager-spacer" aria-hidden="true"></span>
+            <a class="pager-link next" href="../incrementing_and_decrementing/index.html"><small>Next lesson</small><span>Incrementing &amp; Decrementing →</span></a>
+          </nav>
+
+          <footer class="lesson-footer">
+            <p>Private offline study companion · Source lesson: Code Institute, Python and Data Analysis Libraries</p>
+          </footer>
+        </article>
+
+        <aside class="workbench" aria-label="Python workbench">
+          <div class="workbench-header">
+            <div>
+              <p class="workbench-label">Python workbench</p>
+              <span id="runner-status" class="runner-status">Ready</span>
+            </div>
+            <div class="workbench-actions">
+              <button id="reset-code" class="icon-button" type="button" title="Reset this runnable" aria-label="Reset this runnable">↻</button>
+              <button id="theme-toggle" class="icon-button" type="button" title="Switch editor theme" aria-label="Switch editor theme">◐</button>
+              <button id="run-code" class="run-button" type="button">Run code <kbd>Ctrl ↵</kbd></button>
+            </div>
+          </div>
+
+          <div class="runner-tabs" role="tablist" aria-label="Runnable examples">
+            <button id="tab-runnable-1" class="runner-tab active" type="button" role="tab" aria-selected="true" data-runner="runnable-1">Runnable 1</button>
+            <button id="tab-runnable-2" class="runner-tab" type="button" role="tab" aria-selected="false" data-runner="runnable-2">Runnable 2</button>
+          </div>
+
+          <div class="editor-panel">
+            <div class="file-tab"><span class="python-dot" aria-hidden="true"></span> main.py</div>
+            <label class="visually-hidden" for="code-editor">Python code</label>
+            <textarea id="code-editor" class="code-editor" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+          </div>
+
+          <div id="input-panel" class="input-panel" hidden>
+            <label for="program-input">Program input <small>One response per line</small></label>
+            <textarea id="program-input" rows="2" spellcheck="false">12
+5</textarea>
+          </div>
+
+          <div class="console-panel">
+            <div class="console-heading">
+              <span>Console</span>
+              <button id="clear-console" type="button">Clear</button>
+            </div>
+            <pre id="console-output" class="console-output" aria-live="polite">Press “Run code” or Ctrl+Enter.</pre>
+          </div>
+
+          <p class="workbench-help">Runs privately in this browser. No Python installation required.</p>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script src="../pyodide-runner.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

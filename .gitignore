@@ -1,0 +1,14 @@
+# Working-source and local-runner files
+backups/
+*/backups/
+*/server.py
+*/README.md
+*.desktop
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+
+# Local tooling
+.DS_Store
+.vscode/

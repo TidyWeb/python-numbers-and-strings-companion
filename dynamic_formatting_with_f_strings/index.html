@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A private offline companion lesson for practising dynamic string formatting with Python f-strings.">
+  <title>Dynamic String Formatting with F-Strings — Offline Python Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#lesson-content">Skip to the lesson</a>
+
+  <div class="page-shell">
+    <aside class="course-rail" aria-label="Course navigation">
+      <a class="course-mark" href="../basic_maths_and_arithmetic_operators/index.html" aria-label="Return to the first lesson">Py</a>
+      <p class="eyebrow">Python foundations</p>
+      <h1>Manipulating Numbers &amp; Strings</h1>
+      <p class="course-note">Course 03 · Personal offline companion</p>
+
+      <nav class="course-lessons" aria-label="Lessons in this course section">
+        <p class="nav-heading">Lessons</p>
+        <ol>
+          <li><span>01</span><a href="../basic_maths_and_arithmetic_operators/index.html">Basic Maths &amp; Arithmetic</a></li>
+          <li><span>02</span><a href="../incrementing_and_decrementing/index.html">Incrementing &amp; Decrementing</a></li>
+          <li><span>03</span><a href="../string_formatting/index.html">String Formatting</a></li>
+          <li><span>04</span><a href="../string_methods/index.html">String Methods</a></li>
+          <li class="current"><span>05</span><a href="../dynamic_formatting_with_f_strings/index.html" aria-current="page">F-Strings</a></li>
+        </ol>
+      </nav>
+
+      <nav class="lesson-nav" aria-label="Sections on this page">
+        <p class="nav-heading">On this page</p>
+        <ol>
+          <li><span>01</span><a href="#challenge">Challenge</a></li>
+          <li><span>02</span><a href="#explanation">Explanation</a></li>
+          <li><span>03</span><a href="#test">Test</a></li>
+          <li><span>04</span><a href="#solution">Solution</a></li>
+          <li><span>05</span><a href="#review">Review</a></li>
+          <li><span>06</span><a href="#playground">Playground</a></li>
+        </ol>
+      </nav>
+
+      <details class="mobile-course-nav">
+        <summary>Lessons <span aria-hidden="true">▾</span></summary>
+        <ol>
+          <li><a href="../basic_maths_and_arithmetic_operators/index.html">1. Basic Maths &amp; Arithmetic</a></li>
+          <li><a href="../incrementing_and_decrementing/index.html">2. Incrementing &amp; Decrementing</a></li>
+          <li><a href="../string_formatting/index.html">3. String Formatting</a></li>
+          <li><a href="../string_methods/index.html">4. String Methods</a></li>
+          <li><a href="../dynamic_formatting_with_f_strings/index.html" aria-current="page">5. F-Strings</a></li>
+        </ol>
+      </details>
+
+      <div class="rail-footer">
+        <strong>Offline mode</strong>
+        <span>The lesson and Python runner remain on this computer.</span>
+      </div>
+    </aside>
+
+    <main id="lesson-content" class="lesson-page">
+      <header class="lesson-header">
+        <div>
+          <p class="breadcrumb">Course 03 <span>/</span> Manipulating Numbers and Strings</p>
+          <h2>Dynamic String Formatting with F-Strings</h2>
+        </div>
+        <div class="lesson-status" aria-label="Lesson status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Offline lesson
+        </div>
+      </header>
+
+      <div class="learning-stage">
+        <article class="reading-column">
+          <section class="lesson-intro">
+            <p class="section-kicker">Put values straight into text</p>
+            <p class="lede">F-strings are a clear, modern way to insert variables, expressions and formatted numbers directly into Python strings.</p>
+          </section>
+
+          <details id="challenge" class="lesson-section challenge" open>
+            <summary>
+              <span class="section-number">01</span>
+              <span><small>Start by experimenting</small>Challenge</span>
+            </summary>
+            <div class="section-body">
+              <p><strong>Runnable 1</strong> shows two ways to build the same sentence. Start with the first print statement, then uncomment the second one.</p>
+              <ol class="question-list">
+                <li>Predict the output from the first print statement, then run it to check.</li>
+                <li>Identify the values held by <code>name</code> and <code>str(age)</code>.</li>
+                <li>How does the f-string syntax differ from concatenation with <code>+</code>?</li>
+                <li>Which version is easier to understand?</li>
+              </ol>
+            </div>
+          </details>
+
+          <details id="explanation" class="lesson-section explanation">
+            <summary>
+              <span class="section-number">02</span>
+              <span><small>Understand what happened</small>Explanation</span>
+            </summary>
+            <div class="section-body">
+              <div class="answer-strip">
+                <p>The first line prints: <code>Hello, my name is Morgan and I am 25 years old.</code></p>
+                <p><code>name</code> holds <code>"Morgan"</code>; <code>str(age)</code> converts <code>25</code> into text.</p>
+                <p>An f-string begins with <code>f</code> and places values inside curly brackets: <code>{}</code>.</p>
+              </div>
+
+              <h3>Why use f-strings?</h3>
+              <p>Concatenation needs several <code>+</code> operators and manual conversions such as <code>str(age)</code>. An f-string lets the sentence remain in one readable piece:</p>
+              <pre><code>name = "Morgan"
+age = 25
+print(f"Hello, my name is {name} and I am {age} years old.")</code></pre>
+              <p>This is useful for user information, reports, dashboards and messages whose values change while the surrounding text stays the same.</p>
+
+              <h3>Common f-string uses</h3>
+              <div class="table-wrapper">
+                <table class="operator-table">
+                  <thead><tr><th>Use</th><th>Example</th><th>Output</th></tr></thead>
+                  <tbody>
+                    <tr><td>Insert variables</td><td><code>f"The {product} costs ${price}."</code></td><td>The Laptop costs $799.</td></tr>
+                    <tr><td>Evaluate expressions</td><td><code>f"Total cost: ${subtotal + tax}"</code></td><td>Total cost: $55</td></tr>
+                    <tr><td>Format decimals</td><td><code>f"Price: ${price:.2f}"</code></td><td>Price: $3.50</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
+
+          <details id="test" class="lesson-section test">
+            <summary>
+              <span class="section-number">03</span>
+              <span><small>Build something yourself</small>Test your knowledge</span>
+            </summary>
+            <div class="section-body">
+              <p>Complete the receipt system in <strong>Runnable 2</strong>. The item, price, tax rate and calculated total are already provided.</p>
+              <ol class="question-list">
+                <li>Format and print the whole receipt using a single f-string.</li>
+                <li>Use <code>\n</code> to put each receipt entry on a new line.</li>
+                <li>Display monetary values with two decimal places using <code>:.2f</code>.</li>
+              </ol>
+
+              <div class="example-pair">
+                <div><small>Item</small><code>Coffee</code></div>
+                <div><small>Expected output</small><code>Item: Coffee<br>Price: $3.50<br>Tax: 13%<br>Total Tax: $0.46<br>Total after Tax: $3.96</code></div>
+              </div>
+            </div>
+          </details>
+
+          <details id="solution" class="lesson-section solution">
+            <summary>
+              <span class="section-number">04</span>
+              <span><small>Compare after attempting it</small>Solution</span>
+            </summary>
+            <div class="section-body">
+              <p>Your code may differ, but it can follow this structure:</p>
+              <pre><code>item_name = "Coffee"
+price = 3.50
+tax_rate = 0.13
+tax_percentage = 13
+
+total_price = price + (price * tax_rate)
+
+print(f"Item: {item_name}\nPrice: ${price:.2f}\nTax: {tax_percentage}%\nTotal Tax: ${price * tax_rate:.2f}\nTotal after Tax: ${total_price:.2f}")</code></pre>
+              <p class="tip"><strong>Read <code>:.2f</code> in pieces:</strong> the colon begins the formatting instruction, <code>.2</code> requests two decimal places, and <code>f</code> means a fixed-point number.</p>
+            </div>
+          </details>
+
+          <details id="review" class="lesson-section review">
+            <summary>
+              <span class="section-number">05</span>
+              <span><small>Take the idea forward</small>Review</span>
+            </summary>
+            <div class="section-body">
+              <p>F-strings make dynamic output easier to read and maintain. They insert variables without manual type conversion, evaluate expressions inside <code>{}</code>, and format values such as prices precisely.</p>
+            </div>
+          </details>
+
+          <details id="playground" class="lesson-section test" open>
+            <summary>
+              <span class="section-number">06</span>
+              <span><small>Optional companion practice</small>F-String Playground</span>
+            </summary>
+            <div class="section-body">
+              <p><strong>You have now completed the original Code Institute lesson.</strong> This optional playground goes beyond it, so you can experiment with other useful forms of f-string formatting.</p>
+              <p>Open the <strong>Playground</strong> tab in the Python workbench. Run the starter code first, then change one example at a time and run it again.</p>
+
+              <h3>1. Put several values into one string</h3>
+              <p>Each pair of curly brackets contains a variable or expression that Python evaluates:</p>
+              <pre><code>learner = "Sam"
+course = "Python"
+week = 3
+print(f"{learner} is studying {course} in week {week}.")</code></pre>
+              <p><strong>Try it:</strong> change all three values. Notice that the number does not need <code>str()</code>.</p>
+
+              <h3>2. Calculate inside the braces</h3>
+              <p>The braces can contain an expression—not only a variable name:</p>
+              <pre><code>price = 12.50
+quantity = 4
+print(f"Order total: £{price * quantity:.2f}")</code></pre>
+              <p><strong>Try it:</strong> change the price and quantity, then predict the result before running the code.</p>
+
+              <h3>3. Format decimals, percentages and large numbers</h3>
+              <div class="table-wrapper">
+                <table class="operator-table">
+                  <thead><tr><th>Instruction</th><th>Meaning</th><th>Example output</th></tr></thead>
+                  <tbody>
+                    <tr><td><code>:.2f</code></td><td>Fixed-point number with two decimal places</td><td><code>£12.50</code></td></tr>
+                    <tr><td><code>:.0%</code></td><td>Percentage with no decimal places</td><td><code>13%</code></td></tr>
+                    <tr><td><code>:,</code></td><td>Thousands separators</td><td><code>1,250,000</code></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <pre><code>completion = 0.875
+visitors = 1250000
+print(f"Completed: {completion:.0%}")
+print(f"Visitors: {visitors:,}")</code></pre>
+              <p class="tip"><strong>Percentage trap:</strong> Python multiplies the value by 100 for percentage display. Store thirteen per cent as <code>0.13</code>, not <code>13</code>.</p>
+
+              <h3>4. Transform text inside an f-string</h3>
+              <p>A method call is also an expression:</p>
+              <pre><code>name = "ada lovelace"
+print(f"Welcome, {name.title()}!")</code></pre>
+              <p><strong>Try it:</strong> replace <code>.title()</code> with <code>.upper()</code>.</p>
+
+              <h3>5. Align text into columns</h3>
+              <p>A width gives the value room to occupy. The symbols <code>&lt;</code>, <code>&gt;</code> and <code>^</code> align left, right and centre:</p>
+              <pre><code>item = "Notebook"
+price = 4.5
+print(f"|{item:&lt;12}|£{price:&gt;7.2f}|")</code></pre>
+              <p><strong>Try it:</strong> add two more products and print them with the same widths.</p>
+
+              <h3>6. Print curly brackets themselves</h3>
+              <p>Single braces have a special job in an f-string. Double them when the output needs literal braces:</p>
+              <pre><code>topic = "variables"
+print(f"Use {{curly brackets}} around {topic}.")</code></pre>
+              <p>Output: <code>Use {curly brackets} around variables.</code></p>
+
+              <h3>Final playground challenge</h3>
+              <p>Create a small order summary containing a customer’s properly capitalised name, an item, quantity, price, calculated total and discount percentage. Format all money to two decimal places and the discount as a percentage.</p>
+              <p class="tip"><strong>Experiment freely:</strong> the Reset button restores the playground starter whenever you want to begin again.</p>
+            </div>
+          </details>
+
+          <nav class="lesson-pager" aria-label="Adjacent lessons">
+            <a class="pager-link previous" href="../string_methods/index.html"><small>Previous lesson</small><span>← String Methods</span></a>
+            <a class="pager-link next" href="../basic_maths_and_arithmetic_operators/index.html"><small>Return to start</small><span>Basic Maths &amp; Arithmetic ↺</span></a>
+          </nav>
+
+          <footer class="lesson-footer">
+            <p>Private offline study companion · Source lesson: Code Institute, Python and Data Analysis Libraries</p>
+          </footer>
+        </article>
+
+        <aside class="workbench" aria-label="Python workbench">
+          <div class="workbench-header">
+            <div>
+              <p class="workbench-label">Python workbench</p>
+              <span id="runner-status" class="runner-status">Ready</span>
+            </div>
+            <div class="workbench-actions">
+              <button id="reset-code" class="icon-button" type="button" title="Reset this runnable" aria-label="Reset this runnable">↻</button>
+              <button id="theme-toggle" class="icon-button" type="button" title="Switch editor theme" aria-label="Switch editor theme">◐</button>
+              <button id="run-code" class="run-button" type="button">Run code <kbd>Ctrl ↵</kbd></button>
+            </div>
+          </div>
+
+          <div class="runner-tabs" role="tablist" aria-label="Runnable examples">
+            <button id="tab-runnable-1" class="runner-tab active" type="button" role="tab" aria-selected="true" data-runner="runnable-1">Runnable 1</button>
+            <button id="tab-runnable-2" class="runner-tab" type="button" role="tab" aria-selected="false" data-runner="runnable-2">Runnable 2</button>
+            <button id="tab-playground" class="runner-tab" type="button" role="tab" aria-selected="false" data-runner="playground">Playground</button>
+          </div>
+
+          <div class="editor-panel">
+            <div class="file-tab"><span class="python-dot" aria-hidden="true"></span> main.py</div>
+            <label class="visually-hidden" for="code-editor">Python code</label>
+            <textarea id="code-editor" class="code-editor" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+          </div>
+
+          <div id="input-panel" class="input-panel" hidden>
+            <label for="program-input">Program input <small>One response per line</small></label>
+            <textarea id="program-input" rows="2" spellcheck="false"></textarea>
+          </div>
+
+          <div class="console-panel">
+            <div class="console-heading">
+              <span>Console</span>
+              <button id="clear-console" type="button">Clear</button>
+            </div>
+            <pre id="console-output" class="console-output" aria-live="polite">Press “Run code” or Ctrl+Enter.</pre>
+          </div>
+
+          <p class="workbench-help">Runs privately in this browser. No Python installation required.</p>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script src="../pyodide-runner.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A private offline companion lesson for practising Python string formatting.">
+  <title>String Formatting — Offline Python Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#lesson-content">Skip to the lesson</a>
+
+  <div class="page-shell">
+    <aside class="course-rail" aria-label="Course navigation">
+      <a class="course-mark" href="../basic_maths_and_arithmetic_operators/index.html" aria-label="Return to the first lesson">Py</a>
+      <p class="eyebrow">Python foundations</p>
+      <h1>Manipulating Numbers &amp; Strings</h1>
+      <p class="course-note">Course 03 · Personal offline companion</p>
+
+      <nav class="course-lessons" aria-label="Lessons in this course section">
+        <p class="nav-heading">Lessons</p>
+        <ol>
+          <li><span>01</span><a href="../basic_maths_and_arithmetic_operators/index.html">Basic Maths &amp; Arithmetic</a></li>
+          <li><span>02</span><a href="../incrementing_and_decrementing/index.html">Incrementing &amp; Decrementing</a></li>
+          <li class="current"><span>03</span><a href="../string_formatting/index.html" aria-current="page">String Formatting</a></li>
+          <li><span>04</span><a href="../string_methods/index.html">String Methods</a></li>
+          <li><span>05</span><a href="../dynamic_formatting_with_f_strings/index.html">F-Strings</a></li>
+        </ol>
+      </nav>
+
+      <nav class="lesson-nav" aria-label="Sections on this page">
+        <p class="nav-heading">On this page</p>
+        <ol>
+          <li><span>01</span><a href="#challenge">Challenge</a></li>
+          <li><span>02</span><a href="#explanation">Explanation</a></li>
+          <li><span>03</span><a href="#test">Test</a></li>
+          <li><span>04</span><a href="#solution">Solution</a></li>
+          <li><span>05</span><a href="#review">Review</a></li>
+        </ol>
+      </nav>
+
+      <details class="mobile-course-nav">
+        <summary>Lessons <span aria-hidden="true">▾</span></summary>
+        <ol>
+          <li><a href="../basic_maths_and_arithmetic_operators/index.html">1. Basic Maths &amp; Arithmetic</a></li>
+          <li><a href="../incrementing_and_decrementing/index.html">2. Incrementing &amp; Decrementing</a></li>
+          <li><a href="../string_formatting/index.html" aria-current="page">3. String Formatting</a></li>
+          <li><a href="../string_methods/index.html">4. String Methods</a></li>
+          <li><a href="../dynamic_formatting_with_f_strings/index.html">5. F-Strings</a></li>
+        </ol>
+      </details>
+
+      <div class="rail-footer">
+        <strong>Offline mode</strong>
+        <span>The lesson and Python runner remain on this computer.</span>
+      </div>
+    </aside>
+
+    <main id="lesson-content" class="lesson-page">
+      <header class="lesson-header">
+        <div>
+          <p class="breadcrumb">Course 03 <span>/</span> Manipulating Numbers and Strings</p>
+          <h2>String Formatting</h2>
+        </div>
+        <div class="lesson-status" aria-label="Lesson status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Offline lesson
+        </div>
+      </header>
+
+      <div class="learning-stage">
+        <article class="reading-column">
+          <section class="lesson-intro">
+            <p class="section-kicker">Build clear text</p>
+            <p class="lede">String formatting helps programs create readable messages, combine saved text, choose quotes safely and use escape characters for special formatting.</p>
+          </section>
+
+          <details id="challenge" class="lesson-section challenge" open>
+            <summary>
+              <span class="section-number">01</span>
+              <span><small>Start by experimenting</small>Challenge</span>
+            </summary>
+            <div class="section-body">
+              <p>Before running <strong>Runnable 1</strong>, predict what each print statement will display.</p>
+              <ol class="question-list">
+                <li>What exact text and punctuation will the first print statement produce? What does <code>+</code> do?</li>
+                <li>Why can double quotes safely surround <code>"It's a beautiful day!"</code>?</li>
+                <li>What does <code>\n</code> do inside a string? Try adding another one and observe the output.</li>
+                <li>The final example also contains <code>\l</code>. Run it and notice how Python treats that unknown escape sequence.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details id="explanation" class="lesson-section explanation">
+            <summary>
+              <span class="section-number">02</span>
+              <span><small>Understand what happened</small>Explanation</span>
+            </summary>
+            <div class="section-body">
+              <div class="answer-strip">
+                <p><code>+</code> joins strings together; this is called <strong>concatenation</strong>.</p>
+                <p>Double quotes can contain the apostrophe in <code>It's</code> without ending the string.</p>
+                <p><code>\n</code> creates a new line.</p>
+              </div>
+
+              <h3>Concatenating strings with <code>+</code></h3>
+              <p>Concatenation builds messages, labels and prompts from smaller pieces of text.</p>
+              <pre><code>first_name = "John"
+last_name = "Doe"
+full_name = first_name + " " + last_name
+print(full_name)  # John Doe</code></pre>
+              <p>Every joined value must be a string. Convert numbers with <code>str()</code> first:</p>
+              <pre><code>age = 25
+print("I am " + str(age) + " years old.")</code></pre>
+
+              <h3>Single and double quotes</h3>
+              <p>Python accepts either quote style. If the text contains one type of quote, use the other type around the string:</p>
+              <pre><code>print("It's a sunny day!")
+print('She said, "Python is fun!"')</code></pre>
+
+              <h3>Escape characters</h3>
+              <div class="table-wrapper">
+                <table class="operator-table">
+                  <thead><tr><th>Input code</th><th>Meaning</th><th>Output</th></tr></thead>
+                  <tbody>
+                    <tr><td><code>"Hello\nWorld"</code></td><td>New line</td><td>Hello<br>World</td></tr>
+                    <tr><td><code>"Python\tRocks"</code></td><td>Tab space</td><td>Python&nbsp;&nbsp;&nbsp;&nbsp;Rocks</td></tr>
+                    <tr><td><code>'It\'s great!'</code></td><td>Single quote</td><td>It's great!</td></tr>
+                    <tr><td><code>"She said, \"Hello!\""</code></td><td>Double quote</td><td>She said, "Hello!"</td></tr>
+                    <tr><td><code>"C:\\Users\\Documents"</code></td><td>Literal backslashes</td><td>C:\Users\Documents</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
+
+          <details id="test" class="lesson-section test">
+            <summary>
+              <span class="section-number">03</span>
+              <span><small>Build something yourself</small>Test your knowledge</span>
+            </summary>
+            <div class="section-body">
+              <p>In <strong>Runnable 2</strong>, display a welcome message and the location of a user's files:</p>
+              <ol class="question-list">
+                <li>Store the user's name in a variable.</li>
+                <li>Create a greeting that includes the name.</li>
+                <li>Store a file path containing literal backslashes.</li>
+                <li>Print the greeting and file path on separate lines.</li>
+              </ol>
+
+              <div class="example-pair">
+                <div><small>Example user</small><code>Rihanna</code></div>
+                <div><small>Expected output</small><code>Welcome, Rihanna!<br>Your folder is located at C:\Users\Rihanna\Documents</code></div>
+              </div>
+            </div>
+          </details>
+
+          <details id="solution" class="lesson-section solution">
+            <summary>
+              <span class="section-number">04</span>
+              <span><small>Compare after attempting it</small>Solution</span>
+            </summary>
+            <div class="section-body">
+              <p>Your code may differ, but it can follow this structure:</p>
+              <pre><code>username = "Rihanna"
+welcome_message = "Welcome, " + username + "!"
+file_path = "Your folder is located at C:\\Users\\Rihanna\\Documents"
+
+print(welcome_message)
+print(file_path)</code></pre>
+              <p class="tip"><strong>Remember:</strong> A single backslash begins an escape sequence. Use <code>\\</code> when the output needs an actual backslash.</p>
+            </div>
+          </details>
+
+          <details id="review" class="lesson-section review">
+            <summary>
+              <span class="section-number">05</span>
+              <span><small>Take the idea forward</small>Review</span>
+            </summary>
+            <div class="section-body">
+              <p>Concatenation, quote choice and escape characters make text output flexible and predictable. They help prevent syntax errors in user messages, file paths and reports.</p>
+            </div>
+          </details>
+
+          <nav class="lesson-pager" aria-label="Adjacent lessons">
+            <a class="pager-link previous" href="../incrementing_and_decrementing/index.html"><small>Previous lesson</small><span>← Incrementing &amp; Decrementing</span></a>
+            <a class="pager-link next" href="../string_methods/index.html"><small>Next lesson</small><span>String Methods →</span></a>
+          </nav>
+
+          <footer class="lesson-footer">
+            <p>Private offline study companion · Source lesson: Code Institute, Python and Data Analysis Libraries</p>
+          </footer>
+        </article>
+
+        <aside class="workbench" aria-label="Python workbench">
+          <div class="workbench-header">
+            <div>
+              <p class="workbench-label">Python workbench</p>
+              <span id="runner-status" class="runner-status">Ready</span>
+            </div>
+            <div class="workbench-actions">
+              <button id="reset-code" class="icon-button" type="button" title="Reset this runnable" aria-label="Reset this runnable">↻</button>
+              <button id="theme-toggle" class="icon-button" type="button" title="Switch editor theme" aria-label="Switch editor theme">◐</button>
+              <button id="run-code" class="run-button" type="button">Run code <kbd>Ctrl ↵</kbd></button>
+            </div>
+          </div>
+
+          <div class="runner-tabs" role="tablist" aria-label="Runnable examples">
+            <button id="tab-runnable-1" class="runner-tab active" type="button" role="tab" aria-selected="true" data-runner="runnable-1">Runnable 1</button>
+            <button id="tab-runnable-2" class="runner-tab" type="button" role="tab" aria-selected="false" data-runner="runnable-2">Runnable 2</button>
+          </div>
+
+          <div class="editor-panel">
+            <div class="file-tab"><span class="python-dot" aria-hidden="true"></span> main.py</div>
+            <label class="visually-hidden" for="code-editor">Python code</label>
+            <textarea id="code-editor" class="code-editor" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+          </div>
+
+          <div id="input-panel" class="input-panel" hidden>
+            <label for="program-input">Program input <small>One response per line</small></label>
+            <textarea id="program-input" rows="2" spellcheck="false"></textarea>
+          </div>
+
+          <div class="console-panel">
+            <div class="console-heading">
+              <span>Console</span>
+              <button id="clear-console" type="button">Clear</button>
+            </div>
+            <pre id="console-output" class="console-output" aria-live="polite">Press “Run code” or Ctrl+Enter.</pre>
+          </div>
+
+          <p class="workbench-help">Runs privately in this browser. No Python installation required.</p>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script src="../pyodide-runner.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

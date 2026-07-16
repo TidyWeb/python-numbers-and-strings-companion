@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A private offline companion lesson for practising Python string methods.">
+  <title>String Methods — Offline Python Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#lesson-content">Skip to the lesson</a>
+
+  <div class="page-shell">
+    <aside class="course-rail" aria-label="Course navigation">
+      <a class="course-mark" href="../basic_maths_and_arithmetic_operators/index.html" aria-label="Return to the first lesson">Py</a>
+      <p class="eyebrow">Python foundations</p>
+      <h1>Manipulating Numbers &amp; Strings</h1>
+      <p class="course-note">Course 03 · Personal offline companion</p>
+
+      <nav class="course-lessons" aria-label="Lessons in this course section">
+        <p class="nav-heading">Lessons</p>
+        <ol>
+          <li><span>01</span><a href="../basic_maths_and_arithmetic_operators/index.html">Basic Maths &amp; Arithmetic</a></li>
+          <li><span>02</span><a href="../incrementing_and_decrementing/index.html">Incrementing &amp; Decrementing</a></li>
+          <li><span>03</span><a href="../string_formatting/index.html">String Formatting</a></li>
+          <li class="current"><span>04</span><a href="../string_methods/index.html" aria-current="page">String Methods</a></li>
+          <li><span>05</span><a href="../dynamic_formatting_with_f_strings/index.html">F-Strings</a></li>
+        </ol>
+      </nav>
+
+      <nav class="lesson-nav" aria-label="Sections on this page">
+        <p class="nav-heading">On this page</p>
+        <ol>
+          <li><span>01</span><a href="#challenge">Challenge</a></li>
+          <li><span>02</span><a href="#explanation">Explanation</a></li>
+          <li><span>03</span><a href="#test">Test</a></li>
+          <li><span>04</span><a href="#solution">Solution</a></li>
+          <li><span>05</span><a href="#review">Review</a></li>
+        </ol>
+      </nav>
+
+      <details class="mobile-course-nav">
+        <summary>Lessons <span aria-hidden="true">▾</span></summary>
+        <ol>
+          <li><a href="../basic_maths_and_arithmetic_operators/index.html">1. Basic Maths &amp; Arithmetic</a></li>
+          <li><a href="../incrementing_and_decrementing/index.html">2. Incrementing &amp; Decrementing</a></li>
+          <li><a href="../string_formatting/index.html">3. String Formatting</a></li>
+          <li><a href="../string_methods/index.html" aria-current="page">4. String Methods</a></li>
+          <li><a href="../dynamic_formatting_with_f_strings/index.html">5. F-Strings</a></li>
+        </ol>
+      </details>
+
+      <div class="rail-footer">
+        <strong>Offline mode</strong>
+        <span>The lesson and Python runner remain on this computer.</span>
+      </div>
+    </aside>
+
+    <main id="lesson-content" class="lesson-page">
+      <header class="lesson-header">
+        <div>
+          <p class="breadcrumb">Course 03 <span>/</span> Manipulating Numbers and Strings</p>
+          <h2>String Methods</h2>
+        </div>
+        <div class="lesson-status" aria-label="Lesson status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Prototype lesson
+        </div>
+      </header>
+
+      <div class="learning-stage">
+        <article class="reading-column">
+          <section class="lesson-intro">
+            <p class="section-kicker">Work with text efficiently</p>
+            <p class="lede">Strings are one of the most commonly used data types in Python. Python provides built-in string methods that modify, format and analyse text.</p>
+          </section>
+
+          <details id="challenge" class="lesson-section challenge" open>
+            <summary>
+              <span class="section-number">01</span>
+              <span><small>Start by experimenting</small>Challenge</span>
+            </summary>
+            <div class="section-body">
+              <p>Look at the code in <strong>Runnable 1</strong>. Run it before answering these questions:</p>
+              <ol class="question-list">
+                <li>What did <code>text.upper()</code> return to the console? What do you think the <code>.upper()</code> method does?</li>
+                <li>On line 3, what do you think <code>.lower()</code> will do to the <code>text</code> variable? Uncomment the line and run the code to check.</li>
+                <li>What output do you expect when <code>.replace()</code> is run? Uncomment the line and test your prediction.</li>
+                <li>What happens if you use <code>"python"</code> instead of <code>"Python"</code> inside <code>.replace()</code>? Adjust the code and check.</li>
+                <li>What will the final <code>print()</code> statement show? Run the code again and compare the result with your prediction.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details id="explanation" class="lesson-section explanation">
+            <summary>
+              <span class="section-number">02</span>
+              <span><small>Understand what happened</small>Explanation</span>
+            </summary>
+            <div class="section-body">
+              <div class="answer-strip">
+                <p><code>.upper()</code> returns <code>"HELLO, PYTHON!"</code>.</p>
+                <p><code>.lower()</code> returns <code>"hello, python!"</code>.</p>
+                <p><code>.replace("Python", "World")</code> returns <code>"Hello, World!"</code>.</p>
+              </div>
+
+              <p>The replacement is case-sensitive. Using <code>"python"</code> will not match <code>"Python"</code>, so the text remains unchanged.</p>
+
+              <div class="concept-card">
+                <h3>The original string does not change</h3>
+                <p>String methods return a new, modified string. To keep the result, assign it to a variable:</p>
+                <pre><code>text = text.upper()  # overwrite text with the returned value</code></pre>
+              </div>
+
+              <h3>What is a method?</h3>
+              <p>A method is a prewritten function attached to a particular type of data. It provides a ready-made way to perform a common task. For example, the string method <code>.lower()</code> changes every letter in a string to lowercase.</p>
+
+              <h3>Saving string method values</h3>
+              <p>Store a method's returned value when you want to use it later:</p>
+              <pre><code>email = "User@Example.COM"
+lower_case_email = email.lower()
+print(lower_case_email)  # "user@example.com"</code></pre>
+
+              <h3>Common string methods</h3>
+              <div class="method-list" role="list">
+                <section role="listitem">
+                  <code>.lower()</code>
+                  <p>Changes all letters to lowercase.</p>
+                  <pre><code>email = "User@Example.COM"
+print(email.lower())</code></pre>
+                  <span class="output-chip">"user@example.com"</span>
+                </section>
+                <section role="listitem">
+                  <code>.upper()</code>
+                  <p>Changes all letters to uppercase.</p>
+                  <pre><code>username = "pythonDev"
+print(username.upper())</code></pre>
+                  <span class="output-chip">"PYTHONDEV"</span>
+                </section>
+                <section role="listitem">
+                  <code>.replace()</code>
+                  <p>Replaces exact matching text with something else.</p>
+                  <pre><code>sentence = "I love JavaScript!"
+new_sentence = sentence.replace("JavaScript", "Python")
+print(new_sentence)</code></pre>
+                  <span class="output-chip">"I love Python!"</span>
+                </section>
+                <section role="listitem">
+                  <code>.strip()</code>
+                  <p>Removes whitespace from the beginning and end.</p>
+                  <pre><code>user_input = "  Hello, World!  "
+cleaned_text = user_input.strip()
+print(cleaned_text)</code></pre>
+                  <span class="output-chip">"Hello, World!"</span>
+                </section>
+              </div>
+
+              <p class="reference-note">Python contains many more string methods. See the <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" target="_blank" rel="noreferrer">official Python documentation</a> when you are online.</p>
+            </div>
+          </details>
+
+          <details id="test" class="lesson-section test">
+            <summary>
+              <span class="section-number">03</span>
+              <span><small>Build something yourself</small>Test your knowledge</span>
+            </summary>
+            <div class="section-body">
+              <p>Switch to <strong>Runnable 2</strong> and create a program that generates an email address from a name.</p>
+              <ol class="question-list">
+                <li>Ask the user to enter their name.</li>
+                <li>Remove extra spaces at the beginning and end.</li>
+                <li>Convert the name to lowercase.</li>
+                <li>Remove any spaces inside the name.</li>
+                <li>Add <code>"@email.com"</code> and print the final address.</li>
+              </ol>
+
+              <div class="example-pair">
+                <div><small>Example input</small><code>Qu inn Tay lor</code></div>
+                <div><small>Example output</small><code>quinntaylor@email.com</code></div>
+              </div>
+
+              <p class="tip"><strong>Top tip:</strong> Test regularly with <code>print()</code>. Check one step at a time, then remove the temporary print statements when the program works.</p>
+            </div>
+          </details>
+
+          <details id="solution" class="lesson-section solution">
+            <summary>
+              <span class="section-number">04</span>
+              <span><small>Compare after attempting it</small>Solution</span>
+            </summary>
+            <div class="section-body">
+              <p>Your code might differ, but it may follow this structure:</p>
+              <pre><code>name = input("Enter your name: ")
+
+cleaned_name = name.strip()
+lower_name = cleaned_name.lower()
+email = lower_name.replace(" ", "") + "@email.com"
+
+print("Email address:", email)</code></pre>
+
+              <div class="concept-card">
+                <h3>Method chaining</h3>
+                <p>Once each step makes sense, the methods can be joined in one expression:</p>
+                <pre><code>email = input("Enter your name: ").strip().lower().replace(" ", "") + "@email.com"
+print("Email address:", email)</code></pre>
+                <p>Shorter is not automatically clearer. Writing the stages separately is useful while learning what each method returns.</p>
+              </div>
+            </div>
+          </details>
+
+          <details id="review" class="lesson-section review">
+            <summary>
+              <span class="section-number">05</span>
+              <span><small>Take the idea forward</small>Review</span>
+            </summary>
+            <div class="section-body">
+              <p>String methods help clean user input, format text for display and manipulate data consistently. They are useful for form submissions, email addresses, clean URLs and many other everyday programming tasks.</p>
+            </div>
+          </details>
+
+          <nav class="lesson-pager" aria-label="Adjacent lessons">
+            <a class="pager-link previous" href="../string_formatting/index.html"><small>Previous lesson</small><span>← String Formatting</span></a>
+            <a class="pager-link next" href="../dynamic_formatting_with_f_strings/index.html"><small>Next lesson</small><span>F-Strings →</span></a>
+          </nav>
+
+          <footer class="lesson-footer">
+            <p>Private offline study companion · Source lesson: Code Institute, Python and Data Analysis Libraries</p>
+          </footer>
+        </article>
+
+        <aside class="workbench" aria-label="Python workbench">
+          <div class="workbench-header">
+            <div>
+              <p class="workbench-label">Python workbench</p>
+              <span id="runner-status" class="runner-status">Ready</span>
+            </div>
+            <div class="workbench-actions">
+              <button id="reset-code" class="icon-button" type="button" title="Reset this runnable" aria-label="Reset this runnable">↻</button>
+              <button id="theme-toggle" class="icon-button" type="button" title="Switch editor theme" aria-label="Switch editor theme">◐</button>
+              <button id="run-code" class="run-button" type="button">Run code <kbd>Ctrl ↵</kbd></button>
+            </div>
+          </div>
+
+          <div class="runner-tabs" role="tablist" aria-label="Runnable examples">
+            <button id="tab-runnable-1" class="runner-tab active" type="button" role="tab" aria-selected="true" data-runner="runnable-1">Runnable 1</button>
+            <button id="tab-runnable-2" class="runner-tab" type="button" role="tab" aria-selected="false" data-runner="runnable-2">Runnable 2</button>
+          </div>
+
+          <div class="editor-panel">
+            <div class="file-tab"><span class="python-dot" aria-hidden="true"></span> main.py</div>
+            <label class="visually-hidden" for="code-editor">Python code</label>
+            <textarea id="code-editor" class="code-editor" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+          </div>
+
+          <div id="input-panel" class="input-panel" hidden>
+            <label for="program-input">Program input <small>One response per line</small></label>
+            <textarea id="program-input" rows="2" spellcheck="false">Qu inn Tay lor</textarea>
+          </div>
+
+          <div class="console-panel">
+            <div class="console-heading">
+              <span>Console</span>
+              <button id="clear-console" type="button">Clear</button>
+            </div>
+            <pre id="console-output" class="console-output" aria-live="polite">Press “Run code” or Ctrl+Enter.</pre>
+          </div>
+
+          <p class="workbench-help">Runs privately in this browser. No Python installation required.</p>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script src="../pyodide-runner.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
