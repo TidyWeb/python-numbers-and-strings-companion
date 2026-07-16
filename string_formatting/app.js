@@ -13,20 +13,12 @@ print("Line 1\\nLine 2\\line 3\\nline4")`,
     input: "",
   },
   "runnable-2": {
-    code: `# Write your code here
-
-
-user_name = input("Please enter your name")
-greeting = "Welcome, "
-rihanna_file_path = "C:\\\\Users\\\\Rihanna\\\\Documents"
-message = greeting + " " + user_name + "!"
-if user_name == "Rihanna":
-    print(message + "\\n" +rihanna_file_path)`,
+    code: `# Write your code here`,
     input: "Rihanna",
   },
 };
 
-const storagePrefix = "string-formatting-companion";
+const storagePrefix = "string-formatting-companion-v2";
 const editor = document.querySelector("#code-editor");
 const consoleOutput = document.querySelector("#console-output");
 const runButton = document.querySelector("#run-code");
