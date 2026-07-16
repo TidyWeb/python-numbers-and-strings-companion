@@ -14,30 +14,12 @@ print((2 + 3) * 2)`,
     input: "",
   },
   "runnable-2": {
-    code: `# Write your code here:
-#number_01 = input("Give me any number: ")
-#number_02 = input("Give me another number: ")
-#print(int(number_01) + int(number_02))
-#print(int(number_01) - int(number_02))
-#print(int(number_01) * int(number_02))
-#print(int(number_01) / int(number_02))
-#print(int(number_01) // int(number_02))
-#print(int(number_01) ** int(number_02))
-#print(int(number_01) % int(number_02))
-
-num1 = int(input("Give me any number: "))
-num2 = int(input("Give me another number: "))
-#print(num1 + num2)
-#print(num1 - num2)
-#print(num1 * num2)
-#print(num1 / num2)
-#print(num1 // num2)
-print(num1 % num2)`,
+    code: `# Write your code here`,
     input: "12\n5",
   },
 };
 
-const storagePrefix = "basic-maths-arithmetic-companion";
+const storagePrefix = "basic-maths-arithmetic-companion-v2";
 const editor = document.querySelector("#code-editor");
 const consoleOutput = document.querySelector("#console-output");
 const runButton = document.querySelector("#run-code");
