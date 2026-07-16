@@ -6,11 +6,11 @@ const RUNNERS = {
 
 # Uncomment one at a time and predict the output
 
-print(10 - 3)
-print(5 * 2)
-print(8 / 4)
+# print(10 - 3)
+# print(5 * 2)
+# print(8 / 4)
 
-print((2 + 3) * 2)`,
+# print((2 + 3) * 2)`,
     input: "",
   },
   "runnable-2": {

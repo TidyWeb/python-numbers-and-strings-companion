@@ -1133,3 +1133,18 @@ kbd {
     animation-iteration-count: 1 !important;
   }
 }
+.console-input {
+  min-width: 8rem;
+  margin: 0 0.25rem;
+  padding: 0.2rem 0.35rem;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid currentColor;
+  border-radius: 0.25rem;
+  font: inherit;
+}
+
+.console-input:focus-visible {
+  outline: 3px solid #ffd166;
+  outline-offset: 2px;
+}
