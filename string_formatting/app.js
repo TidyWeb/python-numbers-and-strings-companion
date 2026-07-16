@@ -44,7 +44,7 @@ function loadRunner(runner) {
 
   editor.value = localStorage.getItem(storageKey(activeRunner, "code")) ?? RUNNERS[activeRunner].code;
   programInput.value = localStorage.getItem(storageKey(activeRunner, "input")) ?? RUNNERS[activeRunner].input;
-  inputPanel.hidden = activeRunner !== "runnable-2";
+  inputPanel.hidden = true;
 
   tabs.forEach((tab) => {
     const isActive = tab.dataset.runner === activeRunner;
