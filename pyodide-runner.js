@@ -99,7 +99,7 @@ class BrowserPythonRunner extends EventTarget {
       setTimeout(() => { inputPanel.hidden = true; }, 0);
     }
     const shortcut = runButton.querySelector("kbd");
-    if (shortcut) shortcut.textContent = "Shift ↵";
+    if (shortcut) shortcut.textContent = "Ctrl ↵";
 
     const append = (text) => {
       if (consoleOutput.textContent === "Running…") consoleOutput.textContent = "";
@@ -126,12 +126,6 @@ class BrowserPythonRunner extends EventTarget {
       input.focus();
     });
 
-    editor.addEventListener("keydown", (event) => {
-      if (event.shiftKey && event.key === "Enter") {
-        event.preventDefault();
-        runButton.click();
-      }
-    });
     ["#clear-console", "#reset-code", ".runner-tab"].forEach((selector) => {
       document.querySelectorAll(selector).forEach((control) => control.addEventListener("click", () => this.cancel(), { capture: true }));
     });
