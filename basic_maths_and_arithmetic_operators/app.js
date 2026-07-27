@@ -19,7 +19,7 @@ const RUNNERS = {
   },
 };
 
-const storagePrefix = "basic-maths-arithmetic-companion-v2";
+const storagePrefix = "basic-maths-arithmetic-companion-v3";
 const editor = document.querySelector("#code-editor");
 const consoleOutput = document.querySelector("#console-output");
 const runButton = document.querySelector("#run-code");
