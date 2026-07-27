@@ -12,17 +12,12 @@ print(counter)`,
     input: "",
   },
   "runnable-2": {
-    code: `# Write your code here:
-step_count = 0
-step_count += 3000
-step_count += 2000
-step_count -= 500
-print("Total steps: ", (step_count))`,
+    code: `# Write your code here`,
     input: "",
   },
 };
 
-const storagePrefix = "incrementing-decrementing-companion";
+const storagePrefix = "incrementing-decrementing-companion-v2";
 const editor = document.querySelector("#code-editor");
 const consoleOutput = document.querySelector("#console-output");
 const runButton = document.querySelector("#run-code");
