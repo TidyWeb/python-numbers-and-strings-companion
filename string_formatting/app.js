@@ -9,7 +9,8 @@ print(message)
 
 print("It's a beautiful day!")
 
-print("Line 1\\nLine 2\\line 3\\nline4")`,
+# Uncomment this line-break experiment when you are ready to try it.
+# print("Line 1\\nLine 2\\nLine 3\\nLine 4")`,
     input: "",
   },
   "runnable-2": {
@@ -18,7 +19,7 @@ print("Line 1\\nLine 2\\line 3\\nline4")`,
   },
 };
 
-const storagePrefix = "string-formatting-companion-v2";
+const storagePrefix = "string-formatting-companion-v3";
 const editor = document.querySelector("#code-editor");
 const consoleOutput = document.querySelector("#console-output");
 const runButton = document.querySelector("#run-code");
