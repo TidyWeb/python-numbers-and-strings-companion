@@ -1,6 +1,6 @@
 # Manipulating Numbers and Strings with Python
 
-## [🌐 Open the live site: https://tidyweb.github.io/python-numbers-and-strings-companion/ ↗](https://tidyweb.github.io/python-numbers-and-strings-companion/)
+### [Visit the live site ↗](https://tidyweb.github.io/python-numbers-and-strings-companion/)
 
 
 An interactive beginner companion for practising five foundational Python topics:
