@@ -1,5 +1,8 @@
 # Manipulating Numbers and Strings with Python
 
+## [🌐 Open the live site: https://tidyweb.github.io/python-numbers-and-strings-companion/ ↗](https://tidyweb.github.io/python-numbers-and-strings-companion/)
+
+
 An interactive beginner companion for practising five foundational Python topics:
 
 1. [Basic Maths with Arithmetic Operators](basic_maths_and_arithmetic_operators/)
